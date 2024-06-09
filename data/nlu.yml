@@ -1,0 +1,139 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - hello
+    - hi
+
+- intent: symptom_report
+  examples: |
+    - Mi hijo tiene [fiebre](symptom) y [sarpullido](symptom)
+    - Tiene síntomas de [fiebre](symptom) y [dolor de garganta](symptom)
+    - Está experimentando una [erupción](symptom) y [granitos](symptom)
+    - El niño tiene [llagas en la boca](symptom) y [dolor de garganta](symptom)
+    - Mi hijo ha tenido [diarrea](symptom) por [dos días](duration) y [vómitos](symptom)
+    - Presenta [lengua inflamada](symptom) y [lengua roja](symptom) desde hace [tres días](duration)
+    - Mi hija tiene la [lengua blanca](symptom) y [granitos](symptom)
+    - Tiene [ataques de tos](symptom) y [vómitos](symptom)
+    - Está experimentando [tos](symptom) [convulsiva](severity) y [moqueo](symptom)
+    - El niño [moquea](symptom) y [vomita](symptom)
+    - Mi hijo ha tenido [fiebre](symptom) [alta](severity) por dos días y [manchas](symptom)
+    - Presenta [costras](symptom) y [fiebre](symptom) [baja](severity) desde hace tres días
+    - Mi niño se ha despertado con la [piel enrojecida](symptom) y la [cara hinchada](symptom)
+    - Mi hijo [tose](symptom).
+    - Mi hijo tiene llagas en la boca y ampollas en las manos.
+    - El niño presenta erupciones en los pies y dolor de garganta.
+    - Tiene úlceras en la boca y fiebre.
+    - Mi hija tiene manchas rojas en las manos y sarpullido en los pies.
+    - Está experimentando fiebre y ampollas en las manos y pies.
+    - Mi hijo tiene [heridas](symptom) en la [boca](body) y [ampollas](symptom) en las [manos](body).
+    - El niño tiene [granito]s(symptom) en los [pies](body) y [dolor al tragar](symptom).
+    - Tiene [heridas](symptom) en la [lengua](symptom) y [temperatura](symptom) [alta](severity).
+    - Mi hija tiene [manchitas rojas](symptom) en las [manos](body) y [granitos](symptom) en los [pies](body).
+    - Está experimentando [fiebre](symptom) y [manchas](symptom) en las [manos](body) y [pies](body)
+    - Mi hijo tiene [erupción](symptom) roja y [fiebre](symptom) [alta](severity).
+    - Presenta [dolor de garganta](symptom) y [lengua roja](symptom).
+    - Mi hija tiene [sarpullido](symptom) en el [pecho](body) y [escalofríos](symptom).
+    - El niño tiene [manchas rojas](symptom) en el [cuerpo](body) y [dolor](symptom) de [garganta](body).
+    - Está experimentando [fiebre](symptom) y [piel áspera](symptom).
+    - Mi hijo tiene la [cara roja](symptom) y [fiebre](symptom) [baja](severity).
+    - Presenta [erupción](symptom) en las [mejillas](body) y [malestar](symptom) [genera]l(body).
+    - Mi hija tiene [manchas](symptom) rojas en la [cara](body) y [fiebre](symptom).
+    - El niño tiene enrojecimiento en las [mejillas](body) y dolor [articular](body).
+    - Está experimentando [fiebre](symptom) y [sarpullido](symptom) en el [cuerpo](body).
+    - Mi hijo tiene [diarrea](symptom) y [vómitos](symptom).
+    - Presenta dolor [abdomina]l(body)(symptom) y [fiebre](symptom).
+    - Mi hija tiene [náuseas](symptom) y [diarrea](symptom).
+    - El niño ha tenido [vómito]s(symptom) y [malestar](symptom) general desde hace dos días.
+    - Está experimentando [fiebre](symptom) y [dolor](symptom) de [estómago](body).
+    - Mi hijo tiene [sarpullido](symptom) y [fiebre](symptom).
+    - Presenta [ampollas](symptom) y [picazón](symptom).
+    - Mi hija tiene [manchas](symptom) rojas y [fiebre](symptom) [alta](severity).
+    - El niño tiene [erupciones](symptom) en la [piel](body) y [malestar](symptom) general.
+    - Está experimentando [fiebre](symptom) y [ampollas llenas de líquido](symptom).
+    - Mi hijo tiene [manchas](symptom) rojas y [fiebre](symptom) [alta](severity).
+    - Presenta [tos](symptom) y [conjuntivitis](symptom).
+    - Mi hija tiene [sarpullido](symptom) que comenzó en la [cara](body) y [fiebre](symptom).
+    - El niño está [moqueando](symptom) y tiene [manchas](symptom) en la [piel](body).
+    - Está experimentando [tos](symptom) [seca](severity) y [erupciones](symptom).
+    - Mi hijo tiene [hinchazón](symptom) en la [mandíbula](body) y [fiebre](symptom).
+    - Presenta dolor al masticar e [hinchazón](symptom) en el [cuello](body).
+    - Mi hija tiene [glándulas inflamadas](symptom) y [malestar](symptom) general.
+    - El niño tiene [fiebre](symptom) y [dolor](symptom) de [cabeza](body).
+    - Está experimentando [hinchazón](symptom) en las [mejillas](body) y [dolo]r(symptom) de [garganta](body).
+    - Mi hijo tiene [heridas](symptom) en la [boca](body) y [ampollas](symptom) en las [mano]s(body).
+    - El niño tiene [granitos](symptom) en los [pies](body) y [dolor](symptom) al tragar.
+    - Tiene [heridas](symptom) en la [lengua](body) y [temperatura](symptom) [alta](severity).
+    - Mi hija tiene [manchitas](symptom) [rojas](severity) en las [manos](body) y [granitos](symptom) en los [pies](body).
+    - Está experimentando [fiebre](symptom) y [manchas](symptom) en las [manos](body) y [pies](body).
+    - Mi hijo tiene [granitos](symptom) rojos y [calentura](symptom) [alta](severity).
+    - Presenta [garganta](body) [inflamada](symptom) y [lengua](body) con [puntos rojos](symptom).
+    - Mi hija tiene [ronchas](symptom) en el [pecho](body) y [escalofríos](symptom).
+    - El niño tiene [manchas](symptom) rojas en el [cuerpo](body) y [garganta adolorida](symptom).
+    - Está experimentando [fiebre](symptom) y [piel áspera](symptom).
+    - Mi hijo tiene la [cara](body) [como un tomate](symptom) y [febrícula](symptom).
+    - Presenta [cachetes](body) [rojos](symptom) y [se siente mal](symptom).
+    - Mi hija tiene [mejillas](body) [coloradas](symptom) y [temperatura](symptom).
+    - El niño tiene [cara](body) [enrojecida](symptom) y [dolor](symptom) en las [articulaciones](body).
+    - Está experimentando [fiebre](symptom) y [granitos](symptom) en el [cuerpo](body).
+    - Mi hijo tiene [caca aguada](symptom) y [está vomitando](symptom).
+    - Presenta [dolor](symptom) de [panza](body) y [fiebre](symptom).
+    - Mi hija tiene [ganas de vomitar](symptom) y [caca suelta](symptom).
+    - El niño ha tenido [vómitos](symptom) y [se siente mal](symptom) desde hace dos días.
+    - Está experimentando [fiebre](symptom) y [dolor](symptom) de [barriga](body).
+    - Mi hijo tiene [tos](symptom) [fuerte](severity) y [vomita](symptom).
+    - Presenta ataques de [tos](symptom) y [fiebre](symptom) [leve](severity).
+    - Mi hija tiene [tos](symptom) [intensa](severity) y [mocos](symptom).
+    - El niño está [tosiendo](symptom) mucho y tiene [dificultad para respirar](symptom).
+    - Está experimentando [tos](symptom) [seca](severity) y [vomita](symptom) después de toser.
+    - Mi hijo tiene [ronchitas](symptom) y [fiebre](symptom).
+    - Presenta [granitos](symptom) con agua y [picazón](symptom).
+    - Mi hija tiene [puntitos rojos](symptom) y [temperatura](symptom) [alta](severity).
+    - El niño tiene [erupciones](symptom) en la [piel](body) y [se siente mal](symptom).
+    - Está experimentando [fiebre](symptom) y [ampollas](symptom) con líquido.
+    - Mi hijo tiene [puntitos](symptom) rojos y [fiebre](symptom) [alta](severity).
+    - Presenta [tos](symptom) y [ojos rojos](symptom).
+    - Mi hija tiene [ronchitas](symptom) que comenzaron en la [cara](body) y [fiebre](symptom).
+    - El niño está con [mocos](symptom) y tiene [manchitas](symptom) en la [piel](body).
+    - Está experimentando [tos](symptom) seca y [erupciones](symptom).
+    - Mi hijo tiene los [cachetes](body) [hinchados](symptom) y [fiebre](symptom).
+    - Presenta [dolor](symptom) al masticar y [cuello](body) [hinchado](symptom).
+    - Mi hija tiene [bolas](symptom) en el [cuello](body) y [se siente mal](symptom).
+    - El niño tiene [fiebre](symptom) y [dolor](symptom) de [cabeza](body).
+    - Está experimentando [mejillas](body) [hinchadas](symptom) y [dolor](symptom) de [garganta](body).
+
+  
+- intent: ask_diagnosis
+  examples: |
+    - ¿Qué podría tener?
+    - ¿Cuál es el diagnóstico?
+    - ¿Qué enfermedad puede ser?
+    - ¿Qué me recomiendas?
+    - ¿Qué tiene mi hijo?
+    - ¿Cuáles son los siguientes pasos?
+    - ¿Tengo que llevarlo al médico?
+
+- intent: goodbye
+  examples: |
+    - adiós
+    - nos vemos
+    - hasta luego
+    - chao
+    - bye
+
+- intent: affirmation
+  examples: |
+    - sí
+    - claro
+    - efectivamente
+    - así es
+    
+- intent: negation
+  examples: |
+    - no
+    - para nada
+    - qué va    

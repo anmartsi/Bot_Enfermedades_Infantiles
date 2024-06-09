@@ -1,0 +1,66 @@
+version: "3.1"
+
+intents:
+  - greet
+  - symptom_report
+  - ask_diagnosis
+  - goodbye
+
+entities:
+  - symptom
+  - body
+  - severity
+
+slots:
+  diagnosis:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  symptom:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: symptom
+      - type: from_text
+  body:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: body
+      - type: from_text
+  severity:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: severity
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Hola, ¿podrías describirme los síntomas que ves en el niño?"
+  utter_goodbye:
+    - text: "Adiós, cuídate."
+  utter_diagnosis:
+    - text: "{diagnosis}"
+
+forms:
+  symptom_form:
+    required_slots:
+      - symptom
+      - body
+      - severity
+
+actions:
+  - action_provide_diagnosis
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

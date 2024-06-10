@@ -43,7 +43,7 @@ responses:
   utter_greet:
     - text: "Hola, ¿podrías describirme los síntomas que ves en el niño?"
   utter_goodbye:
-    - text: "Adiós, cuídate."
+    - text: "Espero que te haya sido de ayuda."
   utter_diagnosis:
     - text: "{diagnosis}"
 

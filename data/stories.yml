@@ -16,3 +16,8 @@ stories:
     steps:
       - intent: goodbye
       - action: utter_goodbye
+
+  - story: ask illness
+    steps:
+      - intent: ask_illness
+      - action: utter_ask_illness

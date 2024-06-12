@@ -48,7 +48,7 @@ responses:
   utter_diagnosis:
     - text: "{diagnosis}"
   utter_ask_illness:
-    - text: Las enfermedades que conozco son las siguientes: enfermedad mano-pie-boca, escarlatina, gastroenteritis, enfermedad de la bofetada, \ntosferina, varicela, sarampión y paperas.
+    - text: "Las enfermedades que conozco son las siguientes: enfermedad mano-pie-boca, escarlatina, gastroenteritis, enfermedad de la bofetada, \ntosferina, varicela, sarampión y paperas."
 
 forms:
   symptom_form:

@@ -107,15 +107,11 @@ nlu:
     - Está experimentando [mejillas](body) [hinchadas](symptom) y [dolor](symptom) de [garganta](body).
 
   
-- intent: ask_diagnosis
+- intent: ask_illness
   examples: |
-    - ¿Qué podría tener?
-    - ¿Cuál es el diagnóstico?
-    - ¿Qué enfermedad puede ser?
-    - ¿Qué me recomiendas?
-    - ¿Qué tiene mi hijo?
-    - ¿Cuáles son los siguientes pasos?
-    - ¿Tengo que llevarlo al médico?
+    - ¿Qué enfermedades conoces?
+    - Dime lo que sabes
+    - ¿Cuántas enfermedades sabes?
 
 - intent: goodbye
   examples: |
@@ -124,16 +120,5 @@ nlu:
     - hasta luego
     - chao
     - bye
-
-- intent: affirmation
-  examples: |
-    - sí
-    - claro
-    - efectivamente
-    - así es
-    
-- intent: negation
-  examples: |
-    - no
-    - para nada
-    - qué va    
+    - gracias
+    - muchas gracias

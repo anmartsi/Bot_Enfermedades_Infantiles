@@ -5,6 +5,7 @@ intents:
   - symptom_report
   - ask_diagnosis
   - goodbye
+  - ask_illness
 
 entities:
   - symptom
@@ -46,6 +47,8 @@ responses:
     - text: "Espero que te haya sido de ayuda."
   utter_diagnosis:
     - text: "{diagnosis}"
+  utter_ask_illness:
+    - text: Las enfermedades que conozco son las siguientes: enfermedad mano-pie-boca, escarlatina, gastroenteritis, enfermedad de la bofetada, \ntosferina, varicela, sarampión y paperas.
 
 forms:
   symptom_form:
